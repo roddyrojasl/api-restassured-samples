@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent  {
+        docker {
+                    image 'maven:3.8.7-eclipse-temurin-17' // Imagen oficial de Maven con Java
+                  }
+              }
 
     stages {
         stage('Checkout') {
