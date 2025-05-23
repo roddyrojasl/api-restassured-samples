@@ -6,11 +6,6 @@ pipeline {
               }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/roddyrojasl/api-restassured-samples.git'
-            }
-        }
         stage('Install') {
             steps {
                 sh 'mvn install'
